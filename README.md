@@ -1,1 +1,42 @@
-# Quiz6_Rapanot
+#include <stdio.h>
+
+// Function to analyze the number
+void analyzeNumber(int num) {
+    // Check positive, negative, or zero
+    if (num > 0) {
+        printf("The number is POSITIVE.\n");
+    } else if (num < 0) {
+        printf("The number is NEGATIVE.\n");
+    } else {
+        printf("The number is ZERO.\n");
+    }
+
+    // Check even or odd
+    if (num % 2 == 0) {
+        printf("The number is EVEN.\n");
+    } else {
+        printf("The number is ODD.\n");
+    }
+}
+
+int main() {
+    int num;
+    int i;
+
+    printf("================================\n");
+    printf("        NUMBER ANALYZER\n");
+    printf("================================\n\n");
+
+    // Loop for five numbers
+    for (i = 1; i <= 5; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &num);
+
+        analyzeNumber(num);
+        printf("\n");
+    }
+
+    printf("Program finished.\n");
+
+    return 0;
+}
